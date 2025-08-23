@@ -281,6 +281,7 @@ esp_err_t sd_card_init(void) {
 #endif
 
   sdmmc_host_t host = SDSPI_HOST_DEFAULT();
+  host.max_freq_khz = 400; // safe speed
 
   spi_bus_config_t bus_config;
 
